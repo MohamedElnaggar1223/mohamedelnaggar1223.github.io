@@ -1,0 +1,72 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'todo/styles.css' %}" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <h1>TO-DO List!</h1>
+        <form id="newtask" action="{% url 'todo:index' %}" method="POST">
+            {% csrf_token %}
+            <input type="text" id="taskname" name="taskq" placeholder="What do you have planned">
+            <button id="tasksubmit" type="submit">Add Task</button>
+        </form>
+    </div>
+    <main>
+        <section class="tasklist">
+            <h2>Tasks</h2>
+            <div id="tasks">
+                {% for task in tasks %}
+                {% if task.id == idofedit %}    
+                <div class="task">
+                        <div class="content">
+                            <form class="actions" method="POST" action="{% url 'todo:save' task.id %}">
+                                {% csrf_token %}
+                                <input class="text" type="text" name="savetask" value="{{ task }}">
+                        </div>
+                        <div style="display: flex;" class="actions">
+                            <input type="submit" class="edit" value="Save">
+                              </form>
+                            <form method="POST" action="{% url 'todo:done' task.id %}">
+                                {% csrf_token %}
+                                <input type="submit" class="done" value="Done">
+                              </form>
+                            <form method="POST" action="{% url 'todo:delete' task.id %}">
+                                {% csrf_token %}
+                                <input type="submit" class="delete" value="Delete">
+                              </form>
+                        </div>
+                    </div>
+                    {% else %}
+                    <div class="task">
+                    <div class="content">
+                        <input class="text" type="text" value="{{ task }}" readonly="">
+                    </div>
+                    <div style="display: flex;" class="actions">
+                        <form method="POST" action="{% url 'todo:edit' task.id %}">
+                            {% csrf_token %}
+                            <input type="submit" class="edit" value="Edit">
+                          </form>
+                        <form method="POST" action="{% url 'todo:done' task.id %}">
+                            {% csrf_token %}
+                            <input type="submit" class="done" value="Done">
+                          </form>
+                        <form method="POST" action="{% url 'todo:delete' task.id %}">
+                            {% csrf_token %}
+                            <input type="submit" class="delete" value="Delete">
+                          </form>
+                    </div>
+                </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,144 @@
+:root
+{
+    --dark: linear-gradient(#43cea2, #185a9d);
+    --darker:#1F2937;
+    --darkest:#111827;
+    --gray:#046378;
+    --light: #EEE;
+
+}
+a{
+    font-family: arial;
+}
+
+h1{
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 2.5rem;
+    color: var(--gray);
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+body
+{
+    display: flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background: var(--dark);
+    height: 100vh;
+}
+
+.header{
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#newtask{
+    display: flex;
+}
+
+.content
+{
+    background-color: var(--darkest);
+}
+
+input, button, a{
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+#taskname{
+    flex: 1 1 0%;
+    background-color: var(--darker);
+    padding: 1rem;
+    border-radius: 2rem;
+    margin-right: 1rem;
+    color: var(--light);
+    font-size: 1.25rem;
+}
+
+#taskname::placeholder{
+    color: var(--light);
+    opacity: 0.6;
+}
+
+#tasksubmit{
+    color: #02aab0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, #aa076b,#61045f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#tasksubmit:hover
+{
+    opacity:0.75;
+}
+#tasksubmit:active
+{
+    opacity:0.55;
+}
+main{
+    flex: 1 1 0%;
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#tasks .task .actions .edit,#tasks .task .actions .delete,#tasks .task .actions .done{
+    background-image: linear-gradient(to right, #02aab0, #00cdac);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    transition: 0.4s;
+    font-size: 1.125rem;
+    font-weight: 700;
+    font-family: arial;
+}
+
+#tasks .task .content .text{
+    color:var(--light);
+    font-size: 1.125rem;
+    font-weight: 500;
+    width: 100%;
+    display: block;
+}
+
+h2{
+    margin-bottom: 1rem;
+    color: var(--gray);
+    font-weight: 300;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 2rem;
+}
+
+#tasks .task{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--darkest);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+#tasks .task .content .text:not(:read-only)
+{
+    color: palevioletred;
+}
+
+#tasks .task .content {
+    flex : 1 1 20%
+}
+
+#tasks .task .actions{
+    display: flex;
+}
