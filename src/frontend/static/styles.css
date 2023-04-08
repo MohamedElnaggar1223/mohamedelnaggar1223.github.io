@@ -1,0 +1,274 @@
+body {
+    padding: 10px;
+}
+
+img{
+    aspect-ratio: 165 / 203;
+}
+
+#btns
+{
+    display: flex;
+    justify-content: end;
+    margin: 10px;
+    align-items: end;
+    width: 15%;
+}
+
+#header
+{
+    position: relative;
+    margin-top: 15px;
+    display: flex;
+    justify-content: baseline;
+}
+
+#titleheader
+{
+    width: 85%;
+}
+
+.footer1{
+    display: flex;
+    justify-content: center;
+}
+
+.GridBody{
+    position: relative;
+    display: grid;
+    width: 100vw;
+    grid-template-columns: 16fr 16fr 16fr 16fr;
+    gap: 6fr;
+    min-height: 75vh;
+}
+
+#FormSec
+{
+    position: relative;
+    width: 100vw;
+    min-height: 75vh;
+}
+
+#product_form
+{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    margin: 20px;
+    align-items: flex-start;
+    font-size: 20px;
+    margin-left: 40px;
+}
+
+#product_form input label
+{
+    margin: 10px;
+}
+
+#product_form input
+{
+    display: flex;
+    height: 44px;
+    background: #fff;
+    border: 1px solid #dfe1e5;
+    box-shadow: none;
+    border-radius: 24px;
+    font-size: 1.25rem;
+    padding-left: 20px;
+    color: #333333;
+    width: 40vw;
+}
+
+#product_form label
+{
+    font-size: 30px;
+}
+
+.Product{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    position: relative;
+    height: 35vh;
+    font-size: 20px;
+}
+
+.Productcont
+{
+    border: solid #bdb8b8;
+    border-radius: 1rem;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 10px;
+}
+
+.form{
+    position: relative;
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.createlist{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.createlist input{
+    padding: 5px;
+    margin: 10px;
+    border-radius: 2rem;
+    border-color: lightgray;
+    box-shadow: none;
+    outline: 0;
+    border: 1px solid #dfe1e5;
+    width: 45vw;
+    padding-left: 20px;
+}
+
+.Auction2{
+    display: flex;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.Auction2 .info1{
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 32px;
+    width: 50vw;
+}
+
+.titleofauct1{
+    margin-top: 80px;
+}
+
+.Watchlistbtn1{
+    margin-top: 20px;
+    box-shadow: none;
+    background-color: #4d90fe;
+    border: 1px solid #3079ed;
+    color: #fff;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    outline: 0;
+    padding: 8px;
+}
+
+.Watchlistbtn2{
+    margin-top: 20px;
+    box-shadow: none;
+    background-color: #e02d2d;
+    border: 1px solid #e02d2d;
+    color: #fff;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    outline: 0;
+    padding: 8px;
+}
+
+.bidval{
+    border-radius: 2rem;
+    margin-top: 20px;
+    border-color: lightgray;
+    box-shadow: none;
+    outline: 0;
+    border: 1px solid #dfe1e5;
+    font-size: 24px;
+    width: 20vw;
+    height: 5vh;
+    padding-left: 20px;
+}
+
+.bidbtn1{
+    box-shadow: none;
+    background-color: #4d90fe;
+    border: 1px solid #3079ed;
+    color: #fff;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    outline: 0;
+    padding: 8px;
+    width: 4vw;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.bid{
+    display: flex;
+}
+
+.bidbody1{
+    height: 70vh;
+    color: #4BB543;
+    font-size: 50px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bidbody2{
+    height: 70vh;
+    color: #e02d2d;
+    font-size: 50px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cominput{
+    display: flex;
+    height: 44px;
+    background: #fff;
+    border: 1px solid #dfe1e5;
+    box-shadow: none;
+    border-radius: 24px;
+    margin: 20px auto;
+    width: 80vw;
+    font-size: 1.25rem;
+    padding-left: 20px;
+    color: #333333;
+}
+
+.cominput:focus{
+    display: flex;
+    outline: none;
+    height: 44px;
+    background: #fff;
+    border: 1px solid #dfe1e5;
+    box-shadow: none;
+    border-radius: 24px;
+    margin: 20px auto;
+}
+

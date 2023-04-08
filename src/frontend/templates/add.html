@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/frontend/static/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Add Product</title>
+</head>
+<body>
+    <div id="header">
+        <div id="titleheader">
+    <h1>Product Add</h1>
+</div>
+    <div id="btns">
+    <ul class="nav">
+        <li class="nav-item">
+            <button type="button" class="btn btn-primary" id="Savebtn">Save</button>
+        </li>
+        <li class="nav-item">
+            <button type="button" class="btn btn-primary" style="margin-left: 10px;" id="Cancelbtn">Cancel</button>
+        </li>
+    </ul>
+</div>
+</div>
+    <hr>
+    <section id="FormSec">
+    <form id="product_form">
+        <label for="sku">SKU</label>
+        <input id="sku" type="text" placeholder="SKU" name="skuname">
+        <label for="name">Name</label>
+        <input id="name" type="text" placeholder="Name" name="namename">
+        <label for="price">Price</label>
+        <input id="price" type="number" placeholder="Price" name="pricename">
+        <label for="productType">Type Switcher</label>
+        <select name="productType" id="productType">
+        <option value="Select">Select</option>
+        <option value="dvd" id="DVD">DVD</option>
+        <option value="furniture" id="Furniture">Furniture</option>
+        <option value="book" id="Book">Book</option>
+        </select>
+        <div id="atrdvd" style="display: none;">
+            <label for="size">Size</label>
+            <input type="number" id="size" placeholder="Size" name="sizename">
+        </div>
+        <div id="atrfurn" style="display: none;">
+            <label for="height">Height</label>
+            <input type="number" id="height" placeholder="Height" name="heightname">
+            <label for="width">Width</label>
+            <input type="number" id="width" placeholder="Width" name="widthname">
+            <label for="Length">Length</label>
+            <input type="number" id="length" placeholder="Length" name="lengthname">
+        </div>
+        <div id="atrbook" style="display: none;">
+            <label for="weight">Weight</label>
+            <input type="number" id="weight" placeholder="Weight" name="weightname">
+        </div>
+        <div id="atrdesc" style="display: none;">
+            <p id="atrpdesc"></p>
+        </div>
+        <div id="message" style="display: none;"></div>
+    </form>
+</section>
+    <hr>
+    <footer class="footer1">Scandiweb Test assignment</footer>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="src/frontend/js/add.js"></script>
+</body>
+</html>
