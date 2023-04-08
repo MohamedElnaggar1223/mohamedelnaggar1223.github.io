@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "jquery": "^3.6.4",
+    "types": "^0.1.1"
+  }
+}
